@@ -127,7 +127,7 @@ const getLabelShadeHex = (hex) => {
   }
 }
 
-export function PrimaryColorPicker({ defaultColor = '#7f5af0', onColorChange = () => {} }) {
+export function PrimaryColorPicker({ defaultColor = '#7f5af0', onColorChange = () => {}, onContinue = () => {} }) {
   const [colorHex, setColorHex] = useState(defaultColor)
   const [hexInput, setHexInput] = useState(defaultColor)
   const [rgbInputs, setRgbInputs] = useState(['127', '90', '240'])
@@ -495,7 +495,7 @@ export function PrimaryColorPicker({ defaultColor = '#7f5af0', onColorChange = (
             prefix={null}
             className="button--icon"
             aria-label="Continue"
-            onClick={() => {}}
+            onClick={() => onContinue({ hex: colorHex })}
             style={{
               '--button-glow': `radial-gradient(70% 70% at 50% 50%, ${colorHex} 0%, transparent 85%)`,
               '--button-glow-blur': '28px',
