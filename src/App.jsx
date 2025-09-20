@@ -10,7 +10,7 @@ function App() {
       case 'guide':
         return <GuidePage />
       case 'creator':
-        return <CreatorPage />
+        return <CreatorPage onVisualize={() => setActivePage('visualizer')} />
       case 'visualizer':
         return <VisualizerPage />
       case 'home':

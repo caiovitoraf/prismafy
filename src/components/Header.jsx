@@ -3,9 +3,6 @@ import { GlassPanel } from './GlassPanel'
 
 const navItems = [
   { key: 'home', label: 'Home' },
-  { key: 'guide', label: 'Guide' },
-  { key: 'creator', label: 'Create' },
-  { key: 'visualizer', label: 'Visualizer' }
 ]
 
 export function Header({ activePage = 'home', onNavigate = () => {} }) {
